@@ -4,17 +4,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Rabbit4 {
+public class Wood3 {
 
-    private Duck5 duck;
+
+    private final Rabbit4 rabbit;
 
     @Autowired
-    public void setDuck(Duck5 duck){
-        this.duck = duck;
+    public Wood3(Rabbit4 rabbit) {
+        this.rabbit = rabbit;
     }
+
 
     @Override
     public String toString() {
-        return ", в зайце утка " + duck.toString();
+        return ", на дереве заяц " + rabbit.toString();
     }
 }
